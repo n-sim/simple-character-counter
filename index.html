@@ -11,13 +11,14 @@
 
 </head>
 
-<body class="bg-gray-100 text-center">
+<body class="bg-white text-center">
     <div id="app">
-        <h1 class="text-3xl mb-6 mt-2">WORD COUNTER</h1>
-        <textarea class="rounded-lg border outline-none" cols="60" rows="5" placeholder="Enter your text"
-            v-model="msg"></textarea>
-        <p>You've entered {{ words }} Word(s)</p>
-        <p>and {{ msg.length }} Characters!</p>
+        <h1 class="text-3xl mb-6 mt-2 text-teal-500">WORD COUNTER</h1>
+        <textarea class="rounded-lg border border-teal-500 p-3 outline-none" cols="60" rows="5"
+            placeholder="Enter your text" v-model="msg"></textarea>
+        <p>You've entered <span class="text-teal-500">{{ words }}</span> Word(s)</p>
+        <p>and <span class="text-teal-500">{{ msg.length }}</span> Characters!</p>
+
     </div>
 
     <script src="main.js"></script>
