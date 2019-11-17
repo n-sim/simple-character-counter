@@ -7,15 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vue</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="bg-gray-100 text-center">
     <div id="app">
-        <h1>WORD COUNTER</h1>
-        <textarea cols="30" rows="5" placeholder="Enter your text" v-model="msg"></textarea>
-        <p>You've entered {{ words }} Word(s)!</p>
+        <h1 class="text-3xl mb-6 mt-2">WORD COUNTER</h1>
+        <textarea class="rounded-lg border outline-none" cols="60" rows="5" placeholder="Enter your text"
+            v-model="msg"></textarea>
+        <p>You've entered {{ words }} Word(s)</p>
+        <p>and {{ msg.length }} Characters!</p>
     </div>
 
     <script src="main.js"></script>
