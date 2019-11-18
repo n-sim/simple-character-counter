@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue</title>
+    <title>Char-Counter</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
@@ -13,7 +13,7 @@
 
 <body class="bg-white text-center">
     <div id="app">
-        <h1 class="text-3xl mb-6 mt-2 text-teal-500">WORD COUNTER</h1>
+        <h1 class="text-3xl mb-6 mt-2 text-teal-500">CHARACTER COUNTER</h1>
         <textarea class="rounded-lg border border-teal-500 p-3 w-4/5 lg:w-1/3 outline-none" rows="5"
             placeholder="Enter your text" v-model="msg"></textarea>
         <p>You've entered <span class="text-teal-500">{{ words }}</span> Word(s)</p>
