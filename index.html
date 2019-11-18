@@ -20,7 +20,8 @@
         <p>and <span class="text-teal-500">{{ chars }}</span> Character(s)!</p>
 
         <div class="mt-4">
-            <p v-for="platform in platforms" :class="{'text-red-600': (platform.max - chars) < 0}">{{ platform.name }}:
+            <p v-for="platform in platforms" :key="platform" :class="{'text-red-600': (platform.max - chars) < 0}">
+                {{ platform.name }}:
                 {{ platform.max - chars }} /
                 {{ platform.max }}</p>
         </div>
