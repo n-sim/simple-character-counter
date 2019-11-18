@@ -1,7 +1,8 @@
 vm = new Vue({
     el: "#app",
     data: {
-        msg: ""
+        msg: "",
+        platforms: [{ name: "Facebook", max: 250 }, { name: "Twitter", max: 280 }, { name: "Google", max: 300 }]
     },
     computed: {
         words() {
@@ -13,6 +14,9 @@ vm = new Vue({
                 }
             });
             return anz
+        },
+        chars() {
+            return this.msg.length;
         }
     }
 

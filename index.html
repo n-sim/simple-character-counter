@@ -17,7 +17,13 @@
         <textarea class="rounded-lg border border-teal-500 p-3 w-4/5 lg:w-1/3 outline-none" rows="5"
             placeholder="Enter your text" v-model="msg"></textarea>
         <p>You've entered <span class="text-teal-500">{{ words }}</span> Word(s)</p>
-        <p>and <span class="text-teal-500">{{ msg.length }}</span> Character(s)!</p>
+        <p>and <span class="text-teal-500">{{ chars }}</span> Character(s)!</p>
+
+        <div class="mt-4">
+            <p v-for="platform in platforms" :class="{'text-red-600': (platform.max - chars) < 0}">{{ platform.name }}:
+                {{ platform.max - chars }} /
+                {{ platform.max }}</p>
+        </div>
     </div>
 
     <script src="main.js"></script>
